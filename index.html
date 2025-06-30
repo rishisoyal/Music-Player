@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Player</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <div id="main-container">
+        <div id="playlist-container">
+            <h2>Playlists</h2>
+            <ul id="playlist"></ul>
+        </div>
+        <div id="music-list-container">
+            <h2>Songs</h2>
+            <ul id="music-list"></ul>
+        </div>
+        <div id="playlist-name"></div>
+        <div id="music-info-container">
+            <img id="poster" alt="poster">
+            <div id="music-name"></div>
+            <div id="music-controler-container">
+                <div id="slider">
+                    <input value="0" type="range" name="silder-input" id="slider-input">
+                </div>
+                <div id="time-info-container">
+                    <div id="current-time">
+                        0:0:0
+                    </div>
+                    <div id="total-duration">
+                        0:0:0
+                    </div>
+                </div>
+                <p style="color: #f5b50a;">Volume</p>
+                <div id="volume-slider">
+                    <input value="50" max="100" type="range" name="volume-input" id="volume-input">
+                </div>
+                <div id="btn-container">
+                    <button class="ctrl-btn" id="prev-btn">Prev</button>
+                    <button class="ctrl-btn" id="play-btn">Play</button>
+                    <button class="ctrl-btn" id="next-btn">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/songData.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

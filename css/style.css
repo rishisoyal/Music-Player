@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #151515;
+    color: #f0f0f0;
+    font-size: 16px;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: row;
+    width: 95vw;
+    /* max-width: 1000px; */
+    height: 95vh;
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    border: 2px solid white;
+}
+
+#music-list-container,
+#playlist-container {
+    width: 35%;
+    background-color: #2c2c2c;
+    padding: 20px;
+    overflow-y: auto;
+    border-right: 1px solid #444;
+}
+
+#music-list-container>h2,
+#playlist-container>h2 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#music-list-container::-webkit-scrollbar,
+#playlist-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+#music-list-container::-webkit-scrollbar-track,
+#playlist-container::-webkit-scrollbar-track {
+    background: black;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+#music-list-container::-webkit-scrollbar-thumb,
+#playlist-container::-webkit-scrollbar-thumb {
+    background: rgb(93, 93, 93);
+}
+
+#music-list,
+#playlist {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#music-list>li>img,
+#poster {
+    border-radius: 20px;
+    width: 60%;
+}
+
+#music-list>li,
+#playlist>li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    background-color: #333;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+#music-list>li:hover,
+#playlist>li:hover {
+    background-color: #444;
+}
+
+#music-info-container {
+    width: 65%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#music-name {
+    font-size: 1.5rem;
+    color: #f5b50a;
+    text-align: center;
+}
+
+#time-info-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#music-controler-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Slider containers */
+
+
+
+#slider{
+    width: 100%;
+}
+
+#slider-input{
+    width: 100%;
+}
+
+/* Slider balls */
+
+/* prevent scrolling during dragging on mobile */
+
+#volume-slider {
+    touch-action: none;
+}
+
+
+/* Buttons */
+.ctrl-btn {
+    padding: 10px 20px;
+    background-color: #f5b50a;
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100px;
+    text-align: center;
+}
+
+.ctrl-btn:hover {
+    background-color: #ffbb00;
+    transform: scale(1.05);
+}
+
+.ctrl-btn:active {
+    transform: scale(1);
+}
+
+#btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #main-container {
+        flex-direction: column;
+        width: 95vw;
+        height: auto;
+    }
+
+    #music-list-container,
+    #music-info-container,
+    #playlist-container {
+        width: 100%;
+    }
+
+    #music-list-container,
+    #playlist-container {
+        max-height: 200px;
+        border-right: none;
+        border-bottom: 1px solid #444;
+    }
+
+    #music-info-container {
+        padding: 15px;
+    }
+
+    #music-name {
+        font-size: 1.2rem;
+    }
+
+    #slider,
+    #volume-slider {
+        max-width: 250px;
+    }
+
+    .ctrl-btn {
+        width: 90px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #music-name {
+        font-size: 1rem;
+    }
+
+    .ctrl-btn {
+        width: 80px;
+        padding: 8px;
+    }
+
+    #slider,
+    #volume-slider {
+        max-width: 200px;
+    }
+}
