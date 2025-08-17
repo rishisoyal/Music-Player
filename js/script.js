@@ -1,16 +1,19 @@
+// Import playlist
+import { playlists } from "./songData.js";
+
 async function main() {
   const play_btn = document.getElementById("play-btn");
   const prev_btn = document.getElementById("prev-btn");
   const next_btn = document.getElementById("next-btn");
-  const slider = document.getElementById("slider");
+  // const slider = document.getElementById("slider");
   const slider_input = document.getElementById("slider-input");
-  const volume_slider = document.getElementById("volume-slider");
+  // const volume_slider = document.getElementById("volume-slider");
   const volume_input = document.getElementById("volume-input");
   const music_list = document.getElementById("music-list");
   const play_list = document.getElementById("playlist");
   const poster_img = document.getElementById("poster");
   const music_name = document.getElementById("music-name");
-  const playlist_name = document.getElementById("playlist-name");
+  // const playlist_name = document.getElementById("playlist-name");
   const current_time = document.getElementById("current-time");
   const total_duration = document.getElementById("total-duration");
 

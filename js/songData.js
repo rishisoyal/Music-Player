@@ -1,4 +1,4 @@
-const playlists = {    
+export const playlists = {    
     "Alan Walker": [
         { poster: ".\\assets\\posters\\alan_walker_dark_side.jpg", src: ".\\songs\\Alan Walker\\Alan Walker - Darkside (feat. AuRa and Tomine Harket).mp3" },
         { poster: ".\\assets\\posters\\alan_walker_don't_you_hold_me_down.jpg", src: ".\\songs\\Alan Walker\\Alan Walker & Georgia Ku - Don't You Hold Me Down (Official Music Video).mp3" },
